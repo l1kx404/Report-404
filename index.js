@@ -1,7 +1,7 @@
 const TelegramBot = require('node-telegram-bot-api');
 const settings = require('./config.js');
 const consoleDisplay = require('./console.display.js');
-const database = require('./lib/database.js');
+const database = require('./database.js');
 
 // Inisialisasi bot
 const bot = new TelegramBot(settings.token, { 
