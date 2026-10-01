@@ -279,9 +279,10 @@ async function simulateReportWithProgress(chatId, userId, type, target, reason, 
 }
 
 // Load semua command files
-require('./commands/main.js')(bot, database, settings, consoleDisplay, userStates, helpers, getStartMessage, getMenuMessage);
-require('./commands/report.js')(bot, database, settings, consoleDisplay, userStates, helpers);
-require('./commands/admin.js')(bot, database, settings, consoleDisplay, helpers);
+// Load semua command files
+require('./main.js')(bot, database, settings, consoleDisplay, userStates, helpers, getStartMessage, getMenuMessage);
+require('./report.js')(bot, database, settings, consoleDisplay, userStates, helpers);
+require('./admin.js')(bot, database, settings, consoleDisplay, helpers);
 
 // Get bot info dan show status
 bot.getMe().then(botInfo => {
